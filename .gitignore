@@ -1,0 +1,15 @@
+# Default from dreamweaver
+_notes/
+/bower_components/
+/node_modules/
+# Webstorm / idea
+.idea/
+# VS Code
+.vscode/
+# Dreamweaver
+_notes
+_compareTemp
+configs/
+dwsync.xml
+dw_php_codehinting.config
+*.mno
