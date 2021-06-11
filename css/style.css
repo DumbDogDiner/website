@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+@import url('./colors.css');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+
+    background-image: url('../img/website_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: 'Roboto', sans-serif;
+
+    user-select: none;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+}
+
+#mainWrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#landingHeader {    
+    flex: 0 1 auto;
+    padding: 1em 1em;
+
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, .6), rgba(0, 0, 0, .35), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    z-index: 0;
+}
+
+#landingHeader h2 {
+    margin-left: 1.5em;
+}
+
+#landingHeader ul {
+    list-style-type: none;
+    color: var(--text-color);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+#landingHeader li {
+    margin-right: 4em;
+    text-transform: uppercase;
+}
+
+#buttonContainer {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#discordLink {
+
+    font-family: 'Open Sans', sans-serif;
+
+    position: relative;
+    color: var(--text-color);
+    border: none;
+    width: 16em;
+    min-height: 6em;    
+    border-radius: 0.25em;
+    background-color: var(--accent-discord-blurple);
+    padding: 0.5em 2em;
+    line-height: 0rem;
+
+    cursor: pointer;
+}
+
+#discordLink p {
+    font-weight: bold;
+}
+
+#mcLink {
+
+    font-family: 'Open Sans', sans-serif;
+
+    position: relative;
+    color: var(--text-color);
+    border: none;
+    min-width: 16em;
+    min-height: 6em;    
+    border-radius: 0.25em;
+    background-color: var(--accent-color-orange);
+    padding: 0.5em 2em;
+    line-height: 0rem;
+
+    margin-left: 2em;
+
+    cursor: pointer;
+}
+
+.minecraftIp {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.minecraftIp:focus {
+    outline: none;
+}
+
+#mcLink p {
+    font-weight: bold;
+}
+
+#discordLink img {
+    height: 2.35em;
+}
+
+#navLink {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#centerContent {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12em;
+}
+
+#centerContent h2 {
+    line-height: 0.05em;
+    font-size: 2em;
+}
+
+#centerContent p {
+    color: var(--text-color);
+    text-align: center;
+}
+
+#navLink::before {
+    content: "";
+
+    height: 2px;
+    width: 0%;
+    position: absolute;
+
+    background-color: var(--text-color);
+    bottom: -0.5em;
+
+    transition: width 0.1s ease-in;
+
+}
+
+#navLink:hover::before {
+    width: 100%;
+}
+
+#headerButton {
+    border: 2px solid white;
+    color: var(--text-color);
+    
+    position: relative;
+
+    text-transform: uppercase;
+    cursor: no-drop;
+
+    font-size: 1em;
+    padding: 1em 2.25em;
+    font-weight: bold;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+#headerButton:hover {
+    color: black;
+}
+
+#headerButton::before {
+    content: "";
+    position: absolute;
+    background: white;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    
+    -webkit-transition: top 0.09s ease-in;
+    transition: top 0.09s ease-in;
+}
+
+#headerButton:hover::before {
+    top: 0;
+}
+
+#contentWrapper {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#landingFooter {
+    width: 100%;
+    /*background: white;*/
+    color: var(--text-color);
+    position: fixed;
+    
+    font-size: 1em;
+    
+    bottom: 0;
+
+}
+
+#landingFooter > p {
+    padding: 0.15em 1.35em;
+}
